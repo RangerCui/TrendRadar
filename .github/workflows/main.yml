@@ -1,0 +1,18 @@
+name: Manual DingTalk Notification
+
+on:
+  workflow_dispatch:  # 支持手动触发
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 发送钉钉消息
+        run: |
+          curl "${{ secrets.DINGTALK_WEBHOOK_URL }}" \
+            -H 'Content-Type: application/json' \
+            -d '{
+              "msgtype": "text",
+              "text": { "content": "🚀 手动触发 GitHub Actions 成功！" }
+            }'
