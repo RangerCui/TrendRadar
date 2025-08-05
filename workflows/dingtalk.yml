@@ -14,5 +14,5 @@ jobs:
             -H 'Content-Type: application/json' \
             -d '{
               "msgtype": "text",
-              "text": { "content": "🚀 手动触发 GitHub Actions 成功！" }
+              "text": { "content": "热点关键字🚀 手动触发 GitHub Actions 成功！" }
             }'
